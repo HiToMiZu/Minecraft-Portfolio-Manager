@@ -3,54 +3,25 @@ body {
     text-shadow: 2px 2px #000;
     image-rendering: pixelated;
     background-image: url('Images/1321959.png');
+    /* your panorama image */
     background-size: cover;
     background-repeat: no-repeat;
-
+    margin: 0;
+    padding: 0;
+    height: 100vh;
 }
 
 .menu {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    position: relative;
 }
 
 .logo {
-    margin-top: 150px;
-    display: flex;
-    justify-content: center;
-}
-
-.buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-
-.buttons button {
-    height: 30pt;
-    width: 300pt;
-    cursor: pointer;
-    overflow: hidden;
-    white-space: nowrap;
-    user-select: none;
-    margin: 8px 0;
-
-    background: #999 url('https://i.ibb.co/rb2TWXL/bgbtn.png') center / cover;
-    image-rendering: pixelated;
-    border: 2px solid #000;
-
-    /* Mouse over */
-    &:hover {
-        background-color: rgba(100, 100, 255, .45);
-        text-shadow: 2px 2px #202013CC;
-        color: #FFFFA0;
-    }
-
-    &:active {
-        box-shadow: inset -2px -4px #0004, inset 2px 2px #FFF5;
-    }
+    margin-bottom: 30px;
 }
 
 .logo-img-container {
@@ -60,30 +31,85 @@ body {
 
 .tooltip {
     position: absolute;
-    color: yellow;
     bottom: 0;
-    font-size: 20px;
     right: 0;
-    z-index: 2;
+    color: yellow;
+    font-size: 20px;
     transform: rotate(-22deg);
+    text-shadow: 2px 2px #000;
+    animation: pulse 2s ease-in-out infinite;
 }
 
-.inline-buttons {
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1) rotate(-22deg);
+    }
+
+    50% {
+        transform: scale(1.2) rotate(-22deg);
+    }
+}
+
+.buttons {
     display: flex;
-    gap: 8px;
-    /* space between buttons */
-    justify-content: center;
-    margin-top: 8px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-.buttons button,
-.inline-buttons button,
-.dot-btn {
+.buttons button {
+    background: #999 url('https://i.ibb.co/rb2TWXL/bgbtn.png') center / cover;
+    border: 2px solid #000;
     font-family: 'Minecraftia', sans-serif;
     font-size: 15px;
-    padding-bottom: .3em;
-
+    height: 30pt;
+    width: 300pt;
+    cursor: pointer;
+    image-rendering: pixelated;
     color: #DDD;
     text-shadow: 2px 2px #000A;
     box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
+    user-select: none;
+}
+
+/* Hover effect like in Minecraft */
+.buttons button:hover {
+    color: #FFFFA0;
+    background-color: rgba(100, 100, 255, 0.2);
+    text-shadow: 2px 2px #202013CC;
+}
+
+
+/* Main button styles (shared by all buttons now) */
+.buttons button {
+    height: 30pt;
+    width: 300pt;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    user-select: none;
+
+    background: #999 url('https://i.ibb.co/rb2TWXL/bgbtn.png') center / cover;
+    image-rendering: pixelated;
+    border: 2px solid #000;
+    font-family: 'Minecraftia', sans-serif;
+    font-size: 15px;
+    padding-bottom: .3em;
+    color: #DDD;
+    1 text-shadow: 2px 2px #000A;
+    box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
+    text-align: center;
+}
+
+/* Inline button container (Email Me + Socials + Dot) */
+.inline-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    width: 300pt;
 }
