@@ -4,23 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Minecraft Portfolio Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet">
+
 </head>
 
 <body>
-    <h1>Minecraft</h1>
-    <h2>Java edition</h2>
-    <form action="">
-        <button value="Projects">Projects</button>
-        <button value="About me">About me</button>
-        <button value="CV">CV</button>
-        <button value="">.</button>
-        <button value="">.</button>
-        <button value="lang">lang</button>
-        <button value="darklight">dol</button>
-
-    </form>
-    <span>1.18.1</span> <span>Copyright</span>
+    <div class="menu">
+        <div class="logo">
+            <div class="logo-img-container">
+                <img id="mclogo"
+                    src="Images/hd-minecraft-logo-transparent-background-701751694772068q54lqpdt1o-removebg-preview.png"
+                    alt="Minecraft logo">
+                <p class="tooltip">Something</p>
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button id="Projects" onclick="location.href = '/Projects.html'">Projects</button>
+        <button onclick="location.href = '/Aboutme.html'">About Me</button>
+        <button onclick="location.href = '/CV.html'">CV</button>
+        <button onclick="location.href = '/Lang.html'">.</button>
+        <button onclick="location.href = '/EmailMe.html'">Email Me</button>
+        <button onclick="location.href = '/Socials.html'">Socials</button>
+    </div>
 </body>
 
 </html>
