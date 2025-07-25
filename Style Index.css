@@ -51,35 +51,6 @@ body {
     margin-top: 170px;
 }
 
-.buttons button {
-    background: #999 url('https://i.ibb.co/rb2TWXL/bgbtn.png') center / cover;
-    border: 2px solid #000;
-    font-family: 'Minecraftia', sans-serif;
-    font-size: 20px;
-    height: 40pt;
-    width: 400pt;
-    cursor: pointer;
-    image-rendering: pixelated;
-    color: #DDD;
-    text-shadow: 2px 2px #000A;
-    box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
-    user-select: none;
-    overflow: hidden;
-    white-space: nowrap;
-    padding-bottom: .3em;
-    box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
-
-    &:hover {
-        color: #FFFFA0;
-        background-color: rgba(100, 100, 255, 0.2);
-        text-shadow: 2px 2px #202013CC;
-    }
-
-    &:active {
-        box-shadow: inset -2px -4px #0004, inset 2px 2px #FFF5;
-    }
-}
-
 .inline-buttons {
     display: flex;
     flex-direction: row;
