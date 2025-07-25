@@ -8,7 +8,6 @@ body {
 }
 
 .menu {
-    max-width: 670px;
     display: flex;
     flex-direction: column;
     align-items: center;
