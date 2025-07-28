@@ -1,0 +1,68 @@
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gray;
+    margin: 0;
+    height: 100%;
+}
+
+#projects {
+    min-height: 20%;
+    min-width: 100%;
+}
+
+p {
+    font-size: 25px;
+    margin: 4px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+
+#search {
+    margin-top: 7px;
+    min-width: 735px;
+    font-size: 30px;
+    min-height: 70px;
+    border: 4px solid white;
+    color: white;
+    background-color: black;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.button-row {
+    display: flex;
+    gap: 16px;
+}
+
+.button-row:first-child button {
+    width: calc(220px * 2 + 16px);
+    min-width: unset;
+}
+
+.button-row button {
+    min-width: 220px;
+    text-align: center;
+}
+
+.buttons button {
+    font-family: 'Minecraftia', 'Press Start 2P', monospace, sans-serif;
+    font-size: 20px;
+    padding: 8px 24px;
+    cursor: pointer;
+    margin-top: 0;
+}
