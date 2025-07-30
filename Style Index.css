@@ -4,6 +4,8 @@ body {
     image-rendering: pixelated;
     background-image: url('Images/1321959.png');
     background-size: cover;
+    min-height: 100vh;
+    margin: 0;
 }
 
 .menu {
@@ -65,4 +67,37 @@ body {
     gap: 8px;
     margin-top: 2%;
     width: 49.6%;
+}
+
+/* Responsive styles for mobile scaling */
+@media (max-width: 700px) {
+    .buttons button {
+        width: 90vw;
+        height: 30pt;
+        font-size: 16px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inline-buttons {
+        width: 90vw;
+        flex-direction: row;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-img-container img {
+        width: 90vw !important;
+        max-width: 500px;
+        height: auto;
+    }
+
+    .tooltip {
+        font-size: 18px;
+    }
+
+    .menu {
+        padding: 10px;
+    }
 }

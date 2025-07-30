@@ -28,7 +28,7 @@ button:focus {
 
 #search {
     margin-top: 7px;
-    min-width: 735px;
+    width: 735px;
     font-size: 30px;
     min-height: 70px;
     border: 4px solid white;
@@ -65,4 +65,48 @@ button:focus {
     padding: 8px 24px;
     cursor: pointer;
     margin-top: 0;
+}
+
+@media (max-width: 1000px) {
+    #search {
+        max-width: 735px;
+        width: 90vw;
+        height: 50px;
+        font-size: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buttons button {
+        min-width: 120px;
+        width: 44vw;
+        max-width: 180px;
+        height: 40px;
+        font-size: clamp(14px, 4vw, 18px);
+        padding: 0.4em 1vw;
+        box-sizing: border-box;
+        margin: 5px 0;
+        font-family: 'Minecraftia', 'Press Start 2P', monospace, sans-serif !important;
+        font-weight: normal;
+        text-align: center;
+        line-height: 1.2;
+        vertical-align: middle;
+    }
+
+    .button-row {
+        width: 95vw;
+        flex-direction: row;
+        gap: 2vw;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 }
