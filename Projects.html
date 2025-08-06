@@ -7,7 +7,6 @@
     <title>My Repo's!</title>
     <link rel="stylesheet" href="main style.css">
     <link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet" />
-    <script src="script.js"></script>
     <link rel="stylesheet" href="Style projects.css">
 </head>
 
@@ -15,21 +14,22 @@
     <p class="menu" style="color: white;">Select Project</p>
     <input class="menu" id="search" type="text">
     <div class="menu" id="projects">
-    <form id="repoForm"></form>
+    <form id="repoForm" class="minecraft-saves-form"></form>
 
     </div>
     <div class="buttons">
         <div class="button-row" id="top-buttons">
-            <button>Open Site/App</button>
-            <button>Get to the Repo</button>
+            <button class="bttn" value="download">Download</button>
+            <button class="bttn" value="site">Get to the Repo</button>
         </div>
         <div class="button-row">
-            <button>Clone</button>
-            <button>Read Me</button>
-            <button>Hide</button>
+            <button class="bttn" value="readme">Read Me</button>
+            <button class="displaybttn" value="show">Show all</button>
+            <button class="displaybttn" value="hide">Hide</button>
             <button onclick="location.href = '/index.html'">Back</button>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
