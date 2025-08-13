@@ -20,7 +20,7 @@ body {
 }
 
 p {
-    font-size: 25px;
+    font-size: 20px;
     margin: 4px;
 }
 
@@ -34,12 +34,20 @@ button:focus {
 
 #search {
     margin-top: 7px;
-    width: 735px;
-    font-size: 30px;
-    min-height: 70px;
+    width: 550px;
+    font-size: 20px;
+    min-height: 55px;
     border: 4px solid white;
     color: white;
     background-color: black;
+}
+
+.no-results {
+    padding: 20px;
+    text-align: center;
+    color: #aaaaaa;
+    font-size: 14px;
+    font-family: 'Minecraftia', monospace;
 }
 
 .buttons {
@@ -80,7 +88,22 @@ button:focus {
 
 .minecraft-saves-form {
     max-height: 55vh;
+    max-width: 55vw;
     overflow-y: auto;
+    margin: 0 auto;
+}
+
+.repo-img {
+    image-rendering: pixelated;
+    border: 1px solid #373737;
+    background-color: #2d2d30;
+    border-radius: 2px;
+    flex-shrink: 0;
+    object-fit: cover;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+
 }
 
 /* Container */
@@ -94,10 +117,18 @@ button:focus {
 /* Save slot label */
 .minecraft-slot {
     user-select: none;
-    padding: 10px 15px;
+    padding: 8px;
     color: #dcdcdc;
     cursor: pointer;
     border-radius: 4px;
+    font-size: 0.95vw;
+    /* New for horizontal layout */
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    max-height: 6vw;
+    /* or center if you want vertical centering */
+    gap: 6px;
 }
 
 /* Selected style */
@@ -105,6 +136,70 @@ button:focus {
     border: 2px solid gray;
     background-color: black;
     color: #fff;
+}
+
+.repo-img-container {
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+    max-width: 6vw;
+}
+
+.repo-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-grow: 1;
+    min-width: 0;
+    margin-left: 6px;
+}
+
+/* Repository main info container - now just for the name */
+.repo-main-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* Repository name styling */
+.repo-name {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Repository description */
+.repo-description {
+    color: #aaaaaa;
+    font-size: 11px;
+    margin: 0;
+    line-height: 1.3;
+    word-wrap: break-word;
+}
+
+/* Repository details container */
+.repo-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 10px;
+    color: #808080;
+    margin: 0;
+}
+
+/* Individual detail spans */
+.repo-language,
+.repo-created,
+.repo-updated {
+    display: block;
+    line-height: 1.2;
+}
+
+/* Language gets a slightly different color */
+.repo-language {
+    color: #9d9d9d;
 }
 
 @media (max-width: 1000px) {
@@ -144,6 +239,7 @@ button:focus {
         text-align: center;
         line-height: 1.2;
         vertical-align: middle;
+
     }
 
     .button-row {
@@ -153,5 +249,29 @@ button:focus {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+    }
+
+    .repo-img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .repo-name {
+        font-size: 12px;
+    }
+
+    .repo-description {
+        font-size: 10px;
+        margin-left: 36px;
+    }
+
+    .repo-details {
+        margin-left: 36px;
+        font-size: 9px;
+    }
+
+    .minecraft-slot {
+        padding: 6px 10px;
+        min-height: 40px;
     }
 }

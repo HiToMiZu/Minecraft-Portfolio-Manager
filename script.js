@@ -8,6 +8,7 @@ class Repo {
     this.language = data.language || 'Unknown';
     this.createdAt = new Date(data.created_at).toLocaleDateString();
     this.updatedAt = new Date(data.updated_at).toLocaleDateString();
+    this.avatar = data.avatar_url;
   }
 
   open(value) {
@@ -144,6 +145,8 @@ class RepoManager {
     return radio;
   }
 
+  // Replace your createLabel method with this updated version:
+
   createLabel(id, repoData) {
     const label = document.createElement('label');
     label.setAttribute('for', id);
@@ -152,16 +155,21 @@ class RepoManager {
     const repo = this.repoInstances[repoData.name];
 
     label.innerHTML = `
-      <div class="repo-main-info">
-        <strong class="repo-name">${repo.name}</strong>
+      <div class="repo-img-container">
+      <img class="repo-img" src="${repoData.owner.avatar_url}" alt="Repository icon">
       </div>
-      <div class="repo-description">${repo.description}</div>
-      <div class="repo-details">
-        <span class="repo-language">${repo.language};</span>
-        <span class="repo-created">Created: ${repo.createdAt};</span>
-        <span class="repo-updated">Last updated: ${repo.updatedAt};</span>
+      <div class="repo-text-content">
+        <div class="repo-main-info">
+          <strong class="repo-name">${repo.name}</strong>
+        </div>
+        <div class="repo-description">${repo.description}</div>
+        <div class="repo-details">
+          <span class="repo-language">${repo.language}</span>
+          <span class="repo-created">Created: ${repo.createdAt}</span>
+          <span class="repo-updated">Last updated: ${repo.updatedAt}</span>
+        </div>
       </div>
-    `;
+  `;
 
     label.addEventListener('dblclick', () => {
       this.selectedRepoInstance?.open('site');
