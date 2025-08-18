@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Me!</title>
+    <link rel="stylesheet" href="main style.css">
+    <link rel="stylesheet" href="Style Emailme.css">
+</head>
+
+<body>
+    <form action="https://formsubmit.co/nikozacharewicz@gmail.com" method="POST" class="mainform">
+
+        <!-- FormSubmit Configuration (Hidden Fields) -->
+        <input type="hidden" name="_subject" value="New Contact Form Submission - Portfolio">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://snazzy-crumble-c5dbe4.netlify.app/EmailMe">
+
+
+        <!-- Actual Form Fields -->
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input class="inputtext" type="text" name="name" id="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Your Email</label>
+            <input class="inputtext" type="email" name="email" id="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="subject">Subject</label>
+            <input class="inputtext" type="text" name="subject" id="subject" required>
+        </div>
+
+        <div class="form-group">
+            <textarea class="inputtext" name="message" id="message" required
+                placeholder="Write your message here..."></textarea>
+        </div>
+
+        <button type="submit" class="button">Send Message</button>
+        <button onclick="location.href = '/index.html'" class="button">Back</button>
+    </form>
+
+</body>
+
+</html>

@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/minecraftia');
+
 body {
     font-family: 'Minecraftia', sans-serif;
     text-shadow: 2px 2px #000;
@@ -18,11 +20,13 @@ body {
 
 .logo-img-container {
     position: relative;
+    user-select: none;
     display: inline-block;
     margin-top: 10%;
 }
 
 .tooltip {
+    user-select: none;
     position: absolute;
     bottom: 0;
     right: 0;

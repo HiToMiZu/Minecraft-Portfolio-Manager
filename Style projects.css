@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/minecraftia');
+
 html {
     background-image: url('Images/Dirt_background_JE1.png');
     background-size: cover;
@@ -34,6 +36,7 @@ button:focus {
 
 #search {
     margin-top: 7px;
+    margin-bottom: 10px;
     width: 550px;
     font-size: 20px;
     min-height: 55px;
@@ -87,10 +90,14 @@ button:focus {
 }
 
 .minecraft-saves-form {
-    max-height: 55vh;
-    max-width: 55vw;
+    height: 65vh;
+    min-width: 100vw;
     overflow-y: auto;
     margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+    /* Inner shadow for depth */
+    position: relative;
 }
 
 .repo-img {
@@ -108,10 +115,12 @@ button:focus {
 
 /* Container */
 .minecraft-saves {
+    max-width: 50vw;
     padding: 8px;
     display: flex;
     flex-direction: column;
     font-family: 'Minecraftia', monospace;
+    margin: 0 auto;
 }
 
 /* Save slot label */
@@ -133,7 +142,7 @@ button:focus {
 
 /* Selected style */
 .radio-hidden:checked+.minecraft-slot {
-    border: 2px solid gray;
+    outline: 2px solid gray;
     background-color: black;
     color: #fff;
 }
