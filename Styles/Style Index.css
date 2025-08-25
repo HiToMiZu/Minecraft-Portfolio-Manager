@@ -4,7 +4,7 @@ body {
     font-family: 'Minecraftia', sans-serif;
     text-shadow: 2px 2px #000;
     image-rendering: pixelated;
-    background-image: url('Images/1321959.png');
+    background-image: url('/Images/1321959.png');
     background-size: cover;
     min-height: 100vh;
     margin: 0;
@@ -75,6 +75,7 @@ body {
 
 /* Responsive styles for mobile scaling */
 @media (max-width: 700px) {
+
     .buttons button {
         width: 90vw;
         height: 30pt;

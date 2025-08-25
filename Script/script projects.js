@@ -37,7 +37,7 @@ class RepoManager {
   }
 
   async loadRepos() {
-    const response = await fetch('https://api.github.com/users/dyad-sh/repos');
+    const response = await fetch('https://api.github.com/users/HiToMiZu/repos');
     const data = await response.json();
     this.allReposData = data;
     this.createRepoElements(data);

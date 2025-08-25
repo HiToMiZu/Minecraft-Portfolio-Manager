@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email Me!</title>
-    <link rel="stylesheet" href="main style.css">
-    <link rel="stylesheet" href="Style Emailme.css">
+    <link rel="stylesheet" href="/Styles/main style.css">
+    <link rel="stylesheet" href="/Styles/Style Emailme.css">
 </head>
 
 <body>
@@ -16,11 +16,11 @@
         <input type="hidden" name="_subject" value="New Contact Form Submission - Portfolio">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://snazzy-crumble-c5dbe4.netlify.app/EmailMe">
+        <!-- <input type="hidden" name="_next" value=""> -->
 
 
         <!-- Actual Form Fields -->
-        <div class="form-group">
+        <div class=" form-group">
             <label for="name">Full Name</label>
             <input class="inputtext" type="text" name="name" id="name" required>
         </div>
@@ -41,7 +41,7 @@
         </div>
 
         <button type="submit" class="button">Send Message</button>
-        <button onclick="location.href = '/index.html'" class="button">Back</button>
+        <button onclick="history.back()" class="button">Back</button>
     </form>
 
 </body>

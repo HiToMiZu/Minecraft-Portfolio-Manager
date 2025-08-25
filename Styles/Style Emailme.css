@@ -1,7 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/minecraftia');
 
 body {
-    background-image: url("Images/Dirt_background_JE1.png");
+    background-image: url("/Images/Dirt_background_JE1.png");
     background-size: cover;
 }
 
@@ -21,7 +21,6 @@ label {
     display: flex;
     margin-top: 5vh;
     align-items: center;
-    width: 100vw;
 }
 
 .button {

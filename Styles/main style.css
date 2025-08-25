@@ -13,6 +13,7 @@ input {
 
 .button,
 .buttons button {
+    user-select: none;
     background: #999 url('https://i.ibb.co/rb2TWXL/bgbtn.png') center / cover;
     border: 2px solid #000;
     font-family: 'minecraftia', sans-serif;
